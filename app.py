@@ -1,3 +1,7 @@
+#!/usr/bin/python
+#Install bottle: pip install bottle
+#run app: python app.py
+
 import bottle
 
 @bottle.route('/')
@@ -28,5 +32,4 @@ def aindex():
 @bottle.route('/<file>')
 def stat(file):
     return bottle.static_file(filename=file,root='.')
-    
 bottle.run()
