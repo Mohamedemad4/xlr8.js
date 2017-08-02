@@ -13,7 +13,7 @@ put in your __index.html__
     <div id='View'>
     
     <h1>Index Page</h1>
-    <a href='/p1' id='p1'>Page 1</a> <a href='/' id='index'>Index</a> <a href='/p2' id='p2'>Page 2</a>
+    <a href='/p1'>Page 1</a> <a href='/' >Index</a> <a href='/p2'>Page 2</a>
     
     </div>
     </div>
@@ -28,14 +28,12 @@ put in your __app.js__
 
 
     pages={
-        'p1':function(){return Change_View('html for page 1','page 1','/p1');},
-        'p2':function(){return Change_View('html for page 2','Page 2','/p2');},
-        'index':function(){return Change_View('html for index page','Index Page','/');}
+        '/p1':function(){return Change_View('html for page 1','page 1','/p1');},
+        '/p2':function(){return Change_View('html for page 2','Page 2','/p2');},
+        '/':function(){return Change_View('html for index page','Index Page','/');}
     }
    
-###### Notice 
 
-in the second line in app.js __p1__ is the id for all links having redirect to /p1 , while __page 1__ and __/p1__ are the title and what should the url be changed to.
 
 ## What if the user disabeld JS?
 it should work just fine (without being an SPA of course)
