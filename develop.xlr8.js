@@ -5,7 +5,7 @@ function _remove(id) {
     element.destroy;
 }
 function _setEvent(id,event){
-    elements=document.querySelectorAll('#'+id);
+    elements=document.querySelectorAll('[href$="'+id+'"]');
     for(element in elements){
     element=elements[element];
     if (element===null){console.log('Set event element doesn`t exsit');continue;}
